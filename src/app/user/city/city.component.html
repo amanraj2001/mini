@@ -1,0 +1,17 @@
+<p>city works!</p>
+
+<div class="container">
+  <div *ngFor="let item of par;let i = index">
+    <p>{{item.cityname}}</p>
+
+    <div *ngFor="let items of item.cars">
+      <p>{{items.carbrand}}</p>
+      <p>{{items.carmodel}}</p>
+      <p>{{items.modelyear}}</p>
+      <div *ngFor="let i of items.images">
+        <img [src]="i.frontview" alt="">
+      </div>
+    </div>
+  </div>
+
+</div>

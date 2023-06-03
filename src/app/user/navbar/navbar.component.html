@@ -1,0 +1,112 @@
+<!-- <div class="container"> -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary   ">
+    <div class="container">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <div class="w-0">
+
+      <img routerLink="" src="https://www.bing.com/th?id=OIP.zGglaSEx-exvrqRCbQejeAHaD-&w=340&h=183&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="image" style="width: 120px;" class="w-0">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Buy Cars
+          </a>
+          <ul class="dropdown-menu" >
+
+
+              <li  *ngFor="let item of cityarr"><a class="dropdown-item" [routerLink]="['used',item.cityname]"   >{{item.cityname}}</a></li>
+
+
+          </ul>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ">Sell Cars</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Buy Cars
+          </a>
+          <ul class="dropdown-menu" >
+
+
+              <li  *ngFor="let item of morearr"><a class="dropdown-item" [routerLink]="['used',item]"   >{{item}}</a></li>
+
+
+          </ul>
+
+        </li>
+        <li class="nav-item" *ngIf="!status">
+          <a type="button" routerLink="signup" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">login/signup</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="status">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            My account
+          </a>
+          <ul class="dropdown-menu" >
+
+
+              <li  *ngFor="let item of morearr"><a class="dropdown-item" [routerLink]="['used',item]"   >{{item}}</a></li>
+
+
+          </ul>
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!--
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Register</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <form action="">
+      <label for="" class="form-label"> Username</label>
+      <input type="text" class="form-control">
+      <label for="" class="form-label"> Email</label>
+      <input type="text" class="form-control">
+      <label for="" class="form-label"> Password</label>
+      <input type="text" class="form-control">
+
+      <li class="text-decoration-none">
+        <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptionss" aria-controls="offcanvasWithBothOptionss">Login</a>
+      </li>
+    </form>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptionss" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div> -->
+
+<!-- </div> -->
+<router-outlet></router-outlet>

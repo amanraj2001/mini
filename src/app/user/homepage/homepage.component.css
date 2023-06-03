@@ -1,0 +1,34 @@
+/*
+.car-img{
+  height: 500px !important;
+  width: 75% !important;
+  margin: auto;
+}
+
+#carouselExampleInterval{
+  background-color: purple;
+} */
+
+.card-img{
+  background-size:cover;
+  opacity: 50%;
+  /* max-width: 1130px; */
+
+}
+
+.card-group:hover {
+  box-shadow: 10px 40px 60px -20px rgba(13, 3, 90, 0.15);
+  z-index: 100;
+}
+
+.card-group:hover .card-title{
+  color: #22d079;
+}
+ /* .card-group .card-img-top{
+  width:264px;
+  height:264px;
+  margin: 80px auto 32px;
+} */
+.card{
+  background-color: #fff6f6;
+}
